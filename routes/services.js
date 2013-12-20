@@ -7,7 +7,7 @@ function mapStateValue(stateValue) {
     case 'OK':
       return 'OK';
     case 'INSUFFICIENT_DATA':
-      return '?';
+      return 'OK';
     case 'ALARM':
       return 'Fail';
   }
