@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="App">
+  <head>
+    <title><%= title %></title>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.10.0/css/semantic.min.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+    <script src="/javascripts/app.js"></script>
+  </head>
+  <body ng-controller="StatusController">
+    <h1>kalagayan</h1>
+    <table class="ui collapsing table segment">
+      <thead>
+        <tr>
+          <th>Status</th>
+          <th>Service</th>
+        </tr>
+      </thead>
+      <tr ng-repeat="service in services | orderBy:'status'">
+        <td><div class="ui horizontal label {{ service.status | status }}">{{ service.status }}</div></td>
+        <td>{{ service.name }}</td>
+      </tr>
+    </table>
+  </body>
+</html>
